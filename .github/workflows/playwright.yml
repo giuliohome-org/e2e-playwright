@@ -6,11 +6,15 @@ on:
       workers:
         description: 'Number of workers'
         # Default value if no value is explicitly provided
-        default: 4
+        default: '4'
         # Input has to be provided for the workflow to run
         required: true
         # The data type of the input
-        type: int
+        type: choice
+        options:
+        - '2'
+        - '4'
+        - '8'
   # push:
   #   branches: [ main, master ]
   # pull_request:
