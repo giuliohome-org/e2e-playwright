@@ -44,6 +44,7 @@ jobs:
         path: playwright-report/
         retention-days: 30
     - name: Upload HTML report to Azure
+      if: always()
       shell: bash
       run: |
         REPORT_DIR='run-${{ github.run_id }}-${{ github.run_attempt }}'
