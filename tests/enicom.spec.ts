@@ -7,7 +7,7 @@ test('test Just Transition', async ({ page }, testInfo) => {
   await expect(page.getByRole('heading', { name: 'Just Transition', exact: true })).toBeVisible();
   const screenshot = await page.screenshot();
   // await page.waitForTimeout(3000);
-  await expect(page).toHaveScreenshot({ maxDiffPixelRatio: 0.4 });
+  await expect(page).toHaveScreenshot({ maxDiffPixelRatio: 0.2 });
   await testInfo.attach('Just Transition', {
     body: screenshot,
     contentType: 'img/png'
